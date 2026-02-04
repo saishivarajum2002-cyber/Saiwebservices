@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" style="scroll-padding-top: 100px;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaiWebServices - Websites with Soul</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for Receipts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="antialiased min-h-screen flex flex-col overflow-x-hidden bg-cream text-espresso selection:bg-orange-200">
+
+    <!-- Navigation -->
+    <nav class="w-full py-8 px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto">
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+            <img src="logo-new.png" alt="SaiWebServices Logo" class="w-12 h-12 object-contain mix-blend-multiply">
+        </div>
+
+        <!-- Desktop Links -->
+        <div class="hidden md:flex items-center gap-10">
+            <a href="index.html" class="text-sm font-semibold hover:text-orange-500 transition-colors">Home</a>
+            <a href="about.html" class="text-sm font-semibold hover:text-orange-500 transition-colors">About Us</a>
+            <a href="#how-it-works" class="text-sm font-semibold hover:text-orange-500 transition-colors">Process</a>
+            <a href="#pricing" class="text-sm font-semibold hover:text-orange-500 transition-colors">Pricing</a>
+            <a href="#contact" class="btn-primary text-sm px-6 py-2">Book a Call</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-espresso">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 z-50 bg-[#FFF9F0] p-6 flex flex-col gap-6">
+        <div class="flex justify-end">
+            <button id="close-menu-btn" class="p-2 text-espresso">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <a href="index.html" class="text-3xl font-bold font-display text-espresso">Home</a>
+        <a href="about.html" class="text-3xl font-bold font-display text-espresso">About Us</a>
+        <a href="#how-it-works" class="text-3xl font-bold font-display text-espresso">Process</a>
+        <a href="#pricing" class="text-3xl font-bold font-display text-espresso">Pricing</a>
+        <a href="#contact" class="btn-primary w-full text-center mt-4">Book a Call</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="pt-12 pb-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+            <div
+                class="inline-block px-4 py-1 border border-amber-900/20 rounded-full text-xs font-bold uppercase tracking-widest text-terracotta mb-6 bg-white">
+                Zero Upfront Cost
+            </div>
+            <h1 class="text-5xl md:text-7xl mb-8 leading-[1.1] text-espresso">
+                Looking for a <br> <span class="text-terracotta font-serif italic">digital wizard?</span>
+            </h1>
+            <p class="text-xl md:text-2xl opacity-80 mb-10 max-w-lg leading-relaxed text-espresso">
+                We craft soulful, custom websites for local businesses. $0 down, $59/month. Pure magic, no stress.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#pricing" class="btn-primary">See Plans</a>
+                <a href="#how-it-works" class="btn-secondary">How it Works</a>
+            </div>
+        </div>
+
+        <div class="order-1 md:order-2 relative flex justify-center">
+            <!-- Arch Image -->
+            <div class="mask-arch w-full max-w-md aspect-[3/4] bg-orange-100 relative shadow-2xl shadow-orange-900/10">
+                <img src="us-team.png" alt="Happy Team"
+                    class="w-full h-full object-cover grayscale contrast-125 sepia-[.3]">
+                <div class="absolute inset-0 bg-orange-500/10 mix-blend-multiply"></div>
+            </div>
+            <!-- Decorative Elements -->
+            <div class="absolute -z-10 top-10 right-10 w-32 h-32 rounded-full bg-orange-200 blur-3xl opacity-50"></div>
+            <div class="absolute -z-10 bottom-10 left-10 w-64 h-64 rounded-full bg-amber-100 blur-3xl opacity-50"></div>
+        </div>
+    </header>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 px-6 border-t border-amber-900/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="card-retro">
+                    <div
+                        class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 mb-6 font-bold text-xl">
+                        $0
+                    </div>
+                    <h3 class="text-2xl mb-4 text-espresso">Zero Risk Design</h3>
+                    <p class="opacity-80 leading-relaxed text-espresso">
+                        Why pay thousands for a promise? We design and build your entire custom site for free. You only
+                        pay when you fall in love with it.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-retro bg-[#FDF6E3]">
+                    <div
+                        class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-700 mb-6 font-bold text-xl">
+                        48h
+                    </div>
+                    <h3 class="text-2xl mb-4 text-espresso">Lightning Fast</h3>
+                    <p class="opacity-80 leading-relaxed text-espresso">
+                        Time is money. We don't waste either. Your fully managed professional website is live and
+                        attracting customers in just 2 days.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-retro">
+                    <div
+                        class="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center text-stone-600 mb-6 font-bold text-xl">
+                        ALL
+                    </div>
+                    <h3 class="text-2xl mb-4 text-espresso">All Inclusive</h3>
+                    <p class="opacity-80 leading-relaxed text-espresso">
+                        Hosting, security, domain, and 24/7 distinct support. It's all included in one transparent
+                        monthly subscription.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works (Steps) -->
+    <section id="how-it-works" class="py-24 px-6 bg-white border-y border-amber-900/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl mb-6 text-espresso">Simple Steps to <span
+                        class="text-terracotta italic">Success</span></h2>
+                <p class="text-xl opacity-70 max-w-2xl mx-auto text-espresso">We've stripped away the complexity. Get
+                    online without the headache.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+                <div class="card-retro p-0 overflow-hidden border-none shadow-none bg-transparent">
+                    <div class="mask-arch w-full h-96 bg-stone-100 relative">
+                        <img src="meeting-icon.png"
+                            class="w-full h-full object-cover opacity-90 mix-blend-multiply grayscale sepia-[.2]"
+                            alt="Meeting">
+                    </div>
+                </div>
+                <div>
+                    <span class="text-6xl font-serif text-orange-200 font-bold mb-4 block">01</span>
+                    <h3 class="text-3xl font-bold mb-4 text-espresso">The Discovery Chat</h3>
+                    <p class="text-lg opacity-80 leading-loose mb-6 text-espresso">
+                        No robots, no long forms. Just a 10-minute friendly chat to understand your business goals. We
+                        listen first, then we build.
+                    </p>
+                    <a href="tel:+14782494394" class="text-terracotta font-bold hover:underline">Book your slot
+                        &rarr;</a>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+                <div class="order-2 md:order-1">
+                    <span class="text-6xl font-serif text-orange-200 font-bold mb-4 block">02</span>
+                    <h3 class="text-3xl font-bold mb-4 text-espresso">The Magic Reveal</h3>
+                    <p class="text-lg opacity-80 leading-loose mb-6 text-espresso">
+                        We go to work. In 48 hours, we present your complete, custom-designed website. See it, click it,
+                        experience it—before paying a dime.
+                    </p>
+                </div>
+                <div class="card-retro p-0 overflow-hidden border-none shadow-none bg-transparent order-1 md:order-2">
+                    <div class="mask-arch w-full h-96 bg-stone-100 relative">
+                        <img src="invoice-icon.png"
+                            class="w-full h-full object-contain p-12 mix-blend-multiply opacity-80" alt="Invoice">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="card-retro p-0 overflow-hidden border-none shadow-none bg-transparent">
+                    <div class="mask-arch w-full h-96 bg-stone-100 relative">
+                        <img src="upload-icon.png"
+                            class="w-full h-full object-contain p-12 mix-blend-multiply opacity-80" alt="Go Live">
+                    </div>
+                </div>
+                <div>
+                    <span class="text-6xl font-serif text-orange-200 font-bold mb-4 block">03</span>
+                    <h3 class="text-3xl font-bold mb-4 text-espresso">Go Live & Grow</h3>
+                    <p class="text-lg opacity-80 leading-loose mb-6 text-espresso">
+                        Love it? We launch it. We handle the technical boring stuff (hosting, SSL, updates) while you
+                        handle your new customers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing (Receipt Style) -->
+    <section id="pricing" class="py-24 px-6 bg-[#3A2A20] text-[#FFF9F0] relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5"
+            style="background-image: radial-gradient(#E89B85 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl mb-6 text-[#FFF9F0]">Transparent Pricing</h2>
+            <p class="text-xl text-white/70 max-w-xl mx-auto mb-16">No hidden fees. Just one simple monthly bill.</p>
+
+            <!-- Receipt Card -->
+            <div
+                class="bg-[#FFF9F0] text-[#3A2A20] p-8 md:p-10 max-w-md mx-auto relative shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-300">
+                <!-- Jagged Top -->
+                <div class="absolute top-0 left-0 w-full h-4 bg-[#3A2A20]"
+                    style="clip-path: polygon(0% 100%, 5% 0%, 10% 100%, 15% 0%, 20% 100%, 25% 0%, 30% 100%, 35% 0%, 40% 100%, 45% 0%, 50% 100%, 55% 0%, 60% 100%, 65% 0%, 70% 100%, 75% 0%, 80% 100%, 85% 0%, 90% 100%, 95% 0%, 100% 100%);">
+                </div>
+
+                <div class="text-center border-b-2 border-dashed border-[#3A2A20]/20 pb-8 mb-8 mt-4">
+                    <img src="logo-new.png" class="w-12 h-12 mx-auto mb-4 mix-blend-multiply" alt="Logo">
+                    <h3 class="text-2xl font-bold font-serif uppercase tracking-widest">OFFICIAL RECEIPT</h3>
+                    <p class="text-xs uppercase tracking-wider opacity-60">Date: Today</p>
+                </div>
+
+                <div class="space-y-4 mb-8 text-left font-mono text-sm">
+                    <div class="flex justify-between">
+                        <span>Pro Website (5 Pages)</span>
+                        <span class="font-bold">$0.00</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Domain + Hosting + SSL</span>
+                        <span class="font-bold">$0.00</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Security & Backups</span>
+                        <span class="font-bold">$0.00</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Email Support & Edits</span>
+                        <span class="font-bold">$0.00</span>
+                    </div>
+                    <div class="border-t border-[#3A2A20]/20 my-2 pt-2 flex justify-between font-bold text-lg">
+                        <span>WEBSITE CARE PLAN</span>
+                        <span>$59.00</span>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-orange-100 p-4 mb-8 text-center text-xs text-orange-800 font-bold border border-orange-200 leading-relaxed">
+                    3-MONTH MINIMUM • CANCEL ANYTIME AFTER<br>
+                    <span class="opacity-70 font-normal">Optional Buyout Available</span>
+                </div>
+
+                <a href="#contact"
+                    class="btn-primary w-full justify-center bg-[#3A2A20] text-[#FFF9F0] border-[#3A2A20] hover:bg-transparent hover:text-[#3A2A20]">START
+                    NOW</a>
+
+                <!-- Jagged Bottom -->
+                <div class="absolute bottom-0 left-0 w-full h-4 bg-[#3A2A20]"
+                    style="clip-path: polygon(0% 0%, 5% 100%, 10% 0%, 15% 100%, 20% 0%, 25% 100%, 30% 0%, 35% 100%, 40% 0%, 45% 100%, 50% 0%, 55% 100%, 60% 0%, 65% 100%, 70% 0%, 75% 100%, 80% 0%, 85% 100%, 90% 0%, 95% 100%, 100% 0%);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl md:text-5xl mb-8 text-espresso">Let's Create <br> <span
+                        class="text-terracotta italic">Something Beautiful</span></h2>
+                <p class="text-xl opacity-80 mb-12 text-espresso">
+                    Ready to transform your business? Fill out the form or give us a ring. We're excited to meet you.
+                </p>
+
+                <div class="space-y-8">
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 shrink-0">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-espresso">Phone</h4>
+                            <a href="tel:+14782494394" class="text-xl font-serif text-terracotta hover:underline">+1
+                                (478) 249-4394</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center text-stone-600 shrink-0">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-espresso">Email</h4>
+                            <a href="mailto:saishiv@saiwebservices.in"
+                                class="text-xl font-serif text-terracotta hover:underline">saishiv@saiwebservices.in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-retro bg-white">
+                <form action="https://formspree.io/f/mkogllzr" method="POST" class="space-y-6">
+                    <div>
+                        <label
+                            class="block font-bold text-sm uppercase tracking-wide opacity-50 mb-2 text-espresso">Your
+                            Name</label>
+                        <input type="text" name="name"
+                            class="w-full bg-[#FFF9F0] border-b-2 border-[#3A2A20]/10 p-4 focus:outline-none focus:border-terracotta text-espresso transition-colors"
+                            required>
+                    </div>
+                    <div>
+                        <label
+                            class="block font-bold text-sm uppercase tracking-wide opacity-50 mb-2 text-espresso">Business
+                            Name</label>
+                        <input type="text" name="business_name"
+                            class="w-full bg-[#FFF9F0] border-b-2 border-[#3A2A20]/10 p-4 focus:outline-none focus:border-terracotta text-espresso transition-colors">
+                    </div>
+                    <div>
+                        <label
+                            class="block font-bold text-sm uppercase tracking-wide opacity-50 mb-2 text-espresso">Phone</label>
+                        <input type="tel" name="phone"
+                            class="w-full bg-[#FFF9F0] border-b-2 border-[#3A2A20]/10 p-4 focus:outline-none focus:border-terracotta text-espresso transition-colors">
+                    </div>
+                    <div>
+                        <label
+                            class="block font-bold text-sm uppercase tracking-wide opacity-50 mb-2 text-espresso">Email</label>
+                        <input type="email" name="email"
+                            class="w-full bg-[#FFF9F0] border-b-2 border-[#3A2A20]/10 p-4 focus:outline-none focus:border-terracotta text-espresso transition-colors"
+                            required>
+                    </div>
+                    <div>
+                        <label class="block font-bold text-sm uppercase tracking-wide opacity-50 mb-2 text-espresso">How
+                            can we help?</label>
+                        <textarea name="message" rows="4"
+                            class="w-full bg-[#FFF9F0] border-b-2 border-[#3A2A20]/10 p-4 focus:outline-none focus:border-terracotta text-espresso transition-colors"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full justify-center">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Redesigned Theme -->
+    <footer class="bg-[#E89B85] text-[#3A2A20] py-16 border-t border-[#3A2A20]/10">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+            <div class="flex flex-col gap-6">
+                <div class="flex items-center gap-3">
+                    <img src="logo-new.png" alt="SaiWebServices Logo"
+                        class="w-10 h-10 object-contain mix-blend-multiply">
+                    <span class="text-2xl font-bold tracking-tight font-serif">SaiWebServices</span>
+                </div>
+                <p class="text-sm opacity-80 leading-relaxed font-medium">Helping local businesses find their digital
+                    soul. Affordable, beautiful, effective.</p>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 uppercase tracking-widest text-xs">Explore</h4>
+                <ul class="space-y-3 font-medium">
+                    <li><a href="#" class="hover:underline">Home</a></li>
+                    <li><a href="#how-it-works" class="hover:underline">Process</a></li>
+                    <li><a href="#pricing" class="hover:underline">Pricing</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 uppercase tracking-widest text-xs">Connect</h4>
+                <ul class="space-y-3 font-medium">
+                    <li><a href="tel:+14782494394" class="hover:underline">(478) 249-4394</a></li>
+                    <li><a href="mailto:saishiv@saiwebservices.in" class="hover:underline">saishiv@saiwebservices.in</a>
+                    </li>
+                    <li><a href="#contact" class="hover:underline">Book a Call</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 uppercase tracking-widest text-xs">Legal</h4>
+                <ul class="space-y-3 font-medium">
+                    <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:underline">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-[#3A2A20]/10 text-center text-sm font-medium opacity-60">
+            &copy; 2026 SaiWebServices. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.remove('hidden');
+        });
+        document.getElementById('close-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+    </script>
+</body>
+
+</html>
